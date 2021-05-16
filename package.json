@@ -1,0 +1,26 @@
+{
+  "name": "cubos-checkout",
+  "version": "1.0.0",
+  "description": "![](https://i.imgur.com/xG74tOh.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cayrota/cubos-checkout.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cayrota/cubos-checkout/issues"
+  },
+  "homepage": "https://github.com/cayrota/cubos-checkout#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "date-fns": "^2.21.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
