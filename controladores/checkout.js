@@ -135,7 +135,7 @@ function editarQuantidadeProduto(req, res) {
     if (!verficarProdutoJaAdicionado(id)) {
         res.status(404);
         res.json(mensagem("Esse produto não foi adicionado ao carrinho."));
-    } if (qtd > qtdEstoque || qtd > (qtdEstoque - verficarProdutoJaAdicionado(id))) {
+    } else if (qtd > qtdEstoque || qtd > (qtdEstoque - verficarProdutoJaAdicionado(id))) {
         res.status(404);
         res.json(mensagem("Esse produto não possui estoque suficiente."));
     } else if ((qtd * -1) > verficarProdutoJaAdicionado(id)) {
@@ -146,10 +146,10 @@ function editarQuantidadeProduto(req, res) {
         if (verficarProdutoJaAdicionado(id) === 0) {
             limparProduto(id);
         }
+        atualizarCarrinho();
+        res.status(200);
+        res.json(carrinho)
     };
-    atualizarCarrinho();
-    res.status(200);
-    res.json(carrinho)
 };
 
 function excluirProduto(req, res) {
